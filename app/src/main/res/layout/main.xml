@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:id="@+id/container"
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+    <LinearLayout
+        android:id="@+id/splash"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView android:id="@+id/image_splash"
+                   android:contentDescription="@string/image_splash" 
+                   android:layout_width="fill_parent"
+                   android:layout_height="50dp"
+                   android:gravity="center" />
+        <TextView android:layout_width="fill_parent"
+                  android:layout_height="wrap_content"
+                  android:gravity="center_horizontal|center_vertical"
+                  android:layout_marginBottom="10dp"
+                  android:text="@string/version" />
+
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/pref_difficulty" />
+
+        <include
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            layout="@layout/pref_theme"
+            android:layout_weight="5.90" />
+
+        <Button  style="@style/button"
+                android:id="@+id/button_play"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:verticalSpacing="50dp"
+                android:horizontalSpacing="20dp"
+                android:gravity="center_horizontal|center_vertical"
+                android:text="@string/button_play" />
+
+    </LinearLayout>
+
+
+</FrameLayout>
+
